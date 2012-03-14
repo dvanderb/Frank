@@ -81,7 +81,8 @@
 #pragma mark - Command handling
 - (NSString *)handleCommandWithRequestBody:(NSString *)requestBody {
     // serialize starting from root window and return json representation of it
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIWindow *window = [[UIApplication sharedApplication].windows objectAtIndex:0];
 	NSDictionary *dom = [self serializeView: window];
     return [dom JSONRepresentation];
 }

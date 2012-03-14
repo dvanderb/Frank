@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		0071264614F8956700E738ED /* ViewJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0071264414F8956700E738ED /* ViewJSONSerializer.h */; };
 		0071264714F8956700E738ED /* ViewJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071264514F8956700E738ED /* ViewJSONSerializer.m */; };
+		49A2CAFE151123A600C578C4 /* UITouchPerformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2CAF8151123A500C578C4 /* UITouchPerformer.m */; };
+		49A2CAFF151123A600C578C4 /* UITouchPerformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CAF9151123A600C578C4 /* UITouchPerformer.h */; };
+		49A2CB00151123A600C578C4 /* UITouch+Synthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2CAFA151123A600C578C4 /* UITouch+Synthesize.m */; };
+		49A2CB01151123A600C578C4 /* UITouch+Synthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CAFB151123A600C578C4 /* UITouch+Synthesize.h */; };
+		49A2CB02151123A600C578C4 /* UIEvent+Synthesize.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2CAFC151123A600C578C4 /* UIEvent+Synthesize.m */; };
+		49A2CB03151123A600C578C4 /* UIEvent+Synthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CAFD151123A600C578C4 /* UIEvent+Synthesize.h */; };
+		49A2CB15151131B100C578C4 /* GraphicsServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB07151131B100C578C4 /* GraphicsServices.h */; };
+		49A2CB16151131B100C578C4 /* GSBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB08151131B100C578C4 /* GSBase.h */; };
+		49A2CB17151131B100C578C4 /* GSCapability.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB09151131B100C578C4 /* GSCapability.h */; };
+		49A2CB18151131B100C578C4 /* GSColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0A151131B100C578C4 /* GSColor.h */; };
+		49A2CB19151131B100C578C4 /* GSEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0B151131B100C578C4 /* GSEvent.h */; };
+		49A2CB1A151131B100C578C4 /* GSFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0C151131B100C578C4 /* GSFont.h */; };
+		49A2CB1B151131B100C578C4 /* GSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0D151131B100C578C4 /* GSGeometry.h */; };
+		49A2CB1C151131B100C578C4 /* GSHeartbeat.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0E151131B100C578C4 /* GSHeartbeat.h */; };
+		49A2CB1D151131B100C578C4 /* GSHiccup.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB0F151131B100C578C4 /* GSHiccup.h */; };
+		49A2CB1E151131B100C578C4 /* GSKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB10151131B100C578C4 /* GSKeyboard.h */; };
+		49A2CB1F151131B100C578C4 /* GSMainScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB11151131B100C578C4 /* GSMainScreen.h */; };
+		49A2CB20151131B100C578C4 /* GSMaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB12151131B100C578C4 /* GSMaps.h */; };
+		49A2CB21151131B100C578C4 /* GSStatusBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB13151131B100C578C4 /* GSStatusBar.h */; };
+		49A2CB22151131B100C578C4 /* GSWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A2CB14151131B100C578C4 /* GSWindow.h */; };
 		4C1DD76C12BADFE100E10B8C /* OrientationCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD76812BADFE100E10B8C /* OrientationCommand.m */; };
 		4C1DD76D12BADFE100E10B8C /* OrientationCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1DD76912BADFE100E10B8C /* OrientationCommand.h */; };
 		4C1DD76E12BADFE100E10B8C /* AppCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DD76A12BADFE100E10B8C /* AppCommand.m */; };
@@ -158,6 +178,26 @@
 /* Begin PBXFileReference section */
 		0071264414F8956700E738ED /* ViewJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewJSONSerializer.h; path = src/ViewJSONSerializer.h; sourceTree = "<group>"; };
 		0071264514F8956700E738ED /* ViewJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewJSONSerializer.m; path = src/ViewJSONSerializer.m; sourceTree = "<group>"; };
+		49A2CAF8151123A500C578C4 /* UITouchPerformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITouchPerformer.m; sourceTree = "<group>"; };
+		49A2CAF9151123A600C578C4 /* UITouchPerformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchPerformer.h; sourceTree = "<group>"; };
+		49A2CAFA151123A600C578C4 /* UITouch+Synthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITouch+Synthesize.m"; sourceTree = "<group>"; };
+		49A2CAFB151123A600C578C4 /* UITouch+Synthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITouch+Synthesize.h"; sourceTree = "<group>"; };
+		49A2CAFC151123A600C578C4 /* UIEvent+Synthesize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIEvent+Synthesize.m"; sourceTree = "<group>"; };
+		49A2CAFD151123A600C578C4 /* UIEvent+Synthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIEvent+Synthesize.h"; sourceTree = "<group>"; };
+		49A2CB07151131B100C578C4 /* GraphicsServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsServices.h; sourceTree = "<group>"; };
+		49A2CB08151131B100C578C4 /* GSBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBase.h; sourceTree = "<group>"; };
+		49A2CB09151131B100C578C4 /* GSCapability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCapability.h; sourceTree = "<group>"; };
+		49A2CB0A151131B100C578C4 /* GSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSColor.h; sourceTree = "<group>"; };
+		49A2CB0B151131B100C578C4 /* GSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSEvent.h; sourceTree = "<group>"; };
+		49A2CB0C151131B100C578C4 /* GSFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFont.h; sourceTree = "<group>"; };
+		49A2CB0D151131B100C578C4 /* GSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGeometry.h; sourceTree = "<group>"; };
+		49A2CB0E151131B100C578C4 /* GSHeartbeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHeartbeat.h; sourceTree = "<group>"; };
+		49A2CB0F151131B100C578C4 /* GSHiccup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHiccup.h; sourceTree = "<group>"; };
+		49A2CB10151131B100C578C4 /* GSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKeyboard.h; sourceTree = "<group>"; };
+		49A2CB11151131B100C578C4 /* GSMainScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMainScreen.h; sourceTree = "<group>"; };
+		49A2CB12151131B100C578C4 /* GSMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMaps.h; sourceTree = "<group>"; };
+		49A2CB13151131B100C578C4 /* GSStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStatusBar.h; sourceTree = "<group>"; };
+		49A2CB14151131B100C578C4 /* GSWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWindow.h; sourceTree = "<group>"; };
 		4C1DD76812BADFE100E10B8C /* OrientationCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrientationCommand.m; path = src/OrientationCommand.m; sourceTree = "<group>"; };
 		4C1DD76912BADFE100E10B8C /* OrientationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrientationCommand.h; path = src/OrientationCommand.h; sourceTree = "<group>"; };
 		4C1DD76A12BADFE100E10B8C /* AppCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppCommand.m; path = src/AppCommand.m; sourceTree = "<group>"; };
@@ -404,6 +444,36 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		49A2CB05151131B100C578C4 /* Private Headers */ = {
+			isa = PBXGroup;
+			children = (
+				49A2CB06151131B100C578C4 /* GraphicsServices */,
+			);
+			name = "Private Headers";
+			path = "lib/UISpec/Private Headers";
+			sourceTree = SOURCE_ROOT;
+		};
+		49A2CB06151131B100C578C4 /* GraphicsServices */ = {
+			isa = PBXGroup;
+			children = (
+				49A2CB07151131B100C578C4 /* GraphicsServices.h */,
+				49A2CB08151131B100C578C4 /* GSBase.h */,
+				49A2CB09151131B100C578C4 /* GSCapability.h */,
+				49A2CB0A151131B100C578C4 /* GSColor.h */,
+				49A2CB0B151131B100C578C4 /* GSEvent.h */,
+				49A2CB0C151131B100C578C4 /* GSFont.h */,
+				49A2CB0D151131B100C578C4 /* GSGeometry.h */,
+				49A2CB0E151131B100C578C4 /* GSHeartbeat.h */,
+				49A2CB0F151131B100C578C4 /* GSHiccup.h */,
+				49A2CB10151131B100C578C4 /* GSKeyboard.h */,
+				49A2CB11151131B100C578C4 /* GSMainScreen.h */,
+				49A2CB12151131B100C578C4 /* GSMaps.h */,
+				49A2CB13151131B100C578C4 /* GSStatusBar.h */,
+				49A2CB14151131B100C578C4 /* GSWindow.h */,
+			);
+			path = GraphicsServices;
+			sourceTree = "<group>";
+		};
 		D629926711AB2CF700CE0FB0 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +523,7 @@
 		D6325E661437F7180057330D /* UISpec */ = {
 			isa = PBXGroup;
 			children = (
+				49A2CB05151131B100C578C4 /* Private Headers */,
 				D6325E671437F7180057330D /* components */,
 				D6325E761437F7180057330D /* dsl */,
 				D6325E941437F7180057330D /* UISpec.bundle */,
@@ -488,6 +559,12 @@
 		D6325E761437F7180057330D /* dsl */ = {
 			isa = PBXGroup;
 			children = (
+				49A2CAF8151123A500C578C4 /* UITouchPerformer.m */,
+				49A2CAF9151123A600C578C4 /* UITouchPerformer.h */,
+				49A2CAFA151123A600C578C4 /* UITouch+Synthesize.m */,
+				49A2CAFB151123A600C578C4 /* UITouch+Synthesize.h */,
+				49A2CAFC151123A600C578C4 /* UIEvent+Synthesize.m */,
+				49A2CAFD151123A600C578C4 /* UIEvent+Synthesize.h */,
 				D6325E771437F7180057330D /* Recordable.h */,
 				D6325E781437F7180057330D /* Recordable.m */,
 				D6325E791437F7180057330D /* UIChildren.h */,
@@ -663,6 +740,23 @@
 				D6BD5222146C36A3001770B1 /* UIQuerySelectorEngine.h in Headers */,
 				0071264614F8956700E738ED /* ViewJSONSerializer.h in Headers */,
 				86123C8814F8221000266AFC /* UIImage+Frank.h in Headers */,
+				49A2CAFF151123A600C578C4 /* UITouchPerformer.h in Headers */,
+				49A2CB01151123A600C578C4 /* UITouch+Synthesize.h in Headers */,
+				49A2CB03151123A600C578C4 /* UIEvent+Synthesize.h in Headers */,
+				49A2CB15151131B100C578C4 /* GraphicsServices.h in Headers */,
+				49A2CB16151131B100C578C4 /* GSBase.h in Headers */,
+				49A2CB17151131B100C578C4 /* GSCapability.h in Headers */,
+				49A2CB18151131B100C578C4 /* GSColor.h in Headers */,
+				49A2CB19151131B100C578C4 /* GSEvent.h in Headers */,
+				49A2CB1A151131B100C578C4 /* GSFont.h in Headers */,
+				49A2CB1B151131B100C578C4 /* GSGeometry.h in Headers */,
+				49A2CB1C151131B100C578C4 /* GSHeartbeat.h in Headers */,
+				49A2CB1D151131B100C578C4 /* GSHiccup.h in Headers */,
+				49A2CB1E151131B100C578C4 /* GSKeyboard.h in Headers */,
+				49A2CB1F151131B100C578C4 /* GSMainScreen.h in Headers */,
+				49A2CB20151131B100C578C4 /* GSMaps.h in Headers */,
+				49A2CB21151131B100C578C4 /* GSStatusBar.h in Headers */,
+				49A2CB22151131B100C578C4 /* GSWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +896,9 @@
 				D6BD5223146C36A3001770B1 /* UIQuerySelectorEngine.m in Sources */,
 				0071264714F8956700E738ED /* ViewJSONSerializer.m in Sources */,
 				86123C8914F8221000266AFC /* UIImage+Frank.m in Sources */,
+				49A2CAFE151123A600C578C4 /* UITouchPerformer.m in Sources */,
+				49A2CB00151123A600C578C4 /* UITouch+Synthesize.m in Sources */,
+				49A2CB02151123A600C578C4 /* UIEvent+Synthesize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
