@@ -1,4 +1,4 @@
-build
+build/
 dist
 
 *.mode1v3
@@ -8,3 +8,4 @@ dist
 *.perspectivev3
 xcuserdata
 .rvmrc
+.idea

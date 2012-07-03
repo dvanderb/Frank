@@ -4,40 +4,33 @@ require 'rspec/expectations'
 
 # -- See -- #
 Then /^I wait to see "([^\"]*)"$/ do |expected_mark|
-  Timeout::timeout(WAIT_TIMEOUT) do
-    until view_with_mark_exists( expected_mark )
-      sleep 0.1
-    end
-  end
+  wait_until(:message => "waited to see view marked '#{expected_mark}'"){ 
+    view_with_mark_exists( expected_mark ) 
+  }
 end
 
 Then /^I wait to not see "([^\"]*)"$/ do |expected_mark|
-  sleep 3
-  Timeout::timeout(WAIT_TIMEOUT) do
-    while element_exists( "view marked:'#{expected_mark}'" )
-      sleep 0.1
-    end
-  end
+  sleep 3 # ugh, this should be removed but I'm worried it'll break existing tests
+
+  wait_until(:message => "waited to not see view marked '#{expected_mark}'"){ 
+    !view_with_mark_exists( expected_mark )
+  }
+end
+
+Then /^I should see a navigation bar titled "([^\"]*)"$/ do |expected_mark|
+  check_element_exists( "navigationItemView marked:'#{expected_mark}'" )
 end
 
 Then /^I wait to see a navigation bar titled "([^\"]*)"$/ do |expected_mark|
-    Timeout::timeout(30) do
-      values = frankly_map( 'navigationItemView', 'accessibilityLabel' )
-      until values.include?(expected_mark)
-        values = frankly_map( 'navigationItemView', 'accessibilityLabel' )
-        sleep 0.1
-      end
-    end
+  wait_until( :timeout => 30, :message => "waited to see a navigation bar titled '#{expected_mark}'" ) {
+    element_exists( "navigationItemView marked:'#{expected_mark}'" )
+  }
 end
 
 Then /^I wait to not see a navigation bar titled "([^\"]*)"$/ do |expected_mark|
-    Timeout::timeout(30) do
-      values = frankly_map( 'navigationItemView', 'accessibilityLabel' )
-      while values.include?(expected_mark)
-        values = frankly_map( 'navigationItemView', 'accessibilityLabel' )
-        sleep 0.1
-      end
-    end
+  wait_until( :timeout => 30, :message => "waited to not see a navigation bar titled '#{expected_mark}'" ) {
+    !element_exists( "navigationItemView marked:'#{expected_mark}'" )
+  }
 end
 
 Then /^I should see a "([^\"]*)" button$/ do |expected_mark|
@@ -45,7 +38,7 @@ Then /^I should see a "([^\"]*)" button$/ do |expected_mark|
 end
 
 Then /^I should see "([^\"]*)"$/ do |expected_mark|
-  check_element_exists("view marked:'#{expected_mark}'")
+  check_view_with_mark_exists(expected_mark)
 end
 
 Then /^I should not see "([^\"]*)"$/ do |expected_mark|
@@ -66,14 +59,8 @@ Then /I should not see the following:/ do |table|
   end
 end
 
-Then /^I should see a navigation bar titled "([^\"]*)"$/ do |expected_mark|
-  values = frankly_map( 'navigationItemView', 'accessibilityLabel' )
-  values.should include(expected_mark)
-end
-
 Then /^I should see an alert view titled "([^\"]*)"$/ do |expected_mark|
-  values = frankly_map( 'alertView', 'message')
-  puts values
+  values = frankly_map( 'alertView', 'title')
   values.should include(expected_mark)
 end
 
@@ -189,6 +176,7 @@ Then /^I rotate to the "([^\"]*)"$/ do |direction|
 end
 
 # -- touch -- #
+# generic views
 When /^I touch "([^\"]*)"$/ do |mark|
   selector = "view marked:'#{mark}' first"
   if element_exists(selector)
@@ -208,6 +196,7 @@ When /^I touch "([^\"]*)" if exists$/ do |mark|
   end
 end
 
+# table cells
 When /^I touch the first table cell$/ do
     touch("tableViewCell first")
 end
@@ -229,10 +218,12 @@ Then /I touch the following:/ do |table|
   end
 end
 
+# buttons
 When /^I touch the button marked "([^\"]*)"$/ do |mark|
   touch( "button marked:'#{mark}'" )
 end
 
+# action sheets
 When /^I touch the "([^\"]*)" action sheet button$/ do |mark|
   touch( "actionSheet threePartButton marked:'#{mark}'" )
 end
@@ -242,6 +233,11 @@ When /^I touch the (\d*)(?:st|nd|rd|th)? action sheet button$/ do |ordinal|
   touch( "actionSheet threePartButton tag:#{ordinal}" )
 end
 
+# alert views
+When /^I touch the "([^\"]*)" alert view button$/ do |mark|
+  touch( "alertView threePartButton marked:'#{mark}'" )
+end
+                                                                     
 When /^I touch the (\d*)(?:st|nd|rd|th)? alert view button$/ do |ordinal|
   ordinal = ordinal.to_i
   touch( "alertView threePartButton tag:#{ordinal}" )
@@ -281,6 +277,7 @@ end
 
 Then /^I navigate back$/ do
   touch( "navigationItemButtonView" )
+  wait_for_nothing_to_be_animating
 end
 
 When /^I dump the DOM$/ do

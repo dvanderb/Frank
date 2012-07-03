@@ -8,10 +8,18 @@
 
 #import "RootViewController.h"
 #import "UISwitchViewController.h"
+#import "CarouselViewController.h"
+#import "EditableTableViewController.h"
+#import "DataEntryViewController.h"
+#import "UIProgressViewController.h"
 
 typedef enum {
     RowsUISwitch,
-    RowsCount
+    RowsCarousel,
+    RowsEditableTable,
+    RowsDataEntry,
+    RowsUIProgressView,
+    RowsCount,
 } Rows;
 
 @implementation RootViewController
@@ -42,13 +50,12 @@ typedef enum {
 	[super viewDidDisappear:animated];
 }
 
-/*
+
  // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
- */
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,6 +82,19 @@ typedef enum {
         case RowsUISwitch:
             cell.textLabel.text = @"UISwitch";
             break;
+        case RowsCarousel:
+            cell.textLabel.text = @"Carousel";
+            break;
+        case RowsEditableTable:
+            cell.textLabel.text = @"Editable Table";
+            break;
+        case RowsDataEntry:
+            cell.textLabel.text = @"Data Entry";
+            break;
+        case RowsUIProgressView:
+            cell.textLabel.text = @"UIProgressView";
+            break;
+
     }
 
     // Configure the cell.
@@ -125,13 +145,25 @@ typedef enum {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIViewController *detailVC;
-    
+
     switch ([indexPath row]) {
         case RowsUISwitch:
             detailVC = [[UISwitchViewController alloc] initWithNibName:@"UISwitchViewController" bundle:nil];
             break;
+        case RowsCarousel:
+            detailVC = [[CarouselViewController alloc] init];
+            break;
+        case RowsEditableTable:
+            detailVC = [[EditableTableViewController alloc] init];
+            break;
+        case RowsDataEntry:
+            detailVC = [[DataEntryViewController alloc] init];
+            break;
+        case RowsUIProgressView:
+            detailVC = [[UIProgressViewController alloc] initWithNibName:@"UIProgressViewController" bundle:nil];
+            break;
     }
-    
+
     [self.navigationController pushViewController:detailVC animated:YES];
     [detailVC release];
 }
